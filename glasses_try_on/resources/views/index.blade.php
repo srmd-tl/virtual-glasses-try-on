@@ -3,19 +3,23 @@
 <head>
     <title>Shades try on</title>
     <meta charset='utf-8' />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
+    <script>
+        $(document).ready(function() {
+            $('.productSummary').click(function(){
+                $('.productSummary').removeClass('current');
+                $(this).addClass('current');
+            });});
+    </script>
     <!-- Forbid resize on pinch with IOS Safari: -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
-
     <!-- INCLUDE MAIN SCRIPT: -->
     <script src='{{asset('JeelizVTOWidget.js')}}'></script>
-
     <!-- For icons adjust fame or resize canvas -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-
     <!-- Font for the header only: -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-
     <!-- main stylesheet: -->
     <link rel='stylesheet' href='{{asset('JeelizVTOWidget.css')}}' />
 
@@ -103,65 +107,119 @@
 
     </script>
 </head>
-
 <body onload="main()">
 <div class='content'>
-
-
     <div class='header'>
         <div class="headerTitle">
             Try on shades
         </div>
     </div>
-
-
     <!-- Please keep the same element IDs so that JEELIZVTOWIDGET can extract them from the DOM -->
-
     <!-- BEGIN JEELIZVTOWIDGET -->
     <!--
-      div with id='JeelizVTOWidget' is the placeholder
-      you need to size and position it according to where the VTO widget should be
-      if you resize it, the widget will be automatically resized
-    -->
+       div with id='JeelizVTOWidget' is the placeholder
+       you need to size and position it according to where the VTO widget should be
+       if you resize it, the widget will be automatically resized
+       -->
     <div id='JeelizVTOWidget'>
         <!-- MAIN CANVAS: -->
         <!--
-         canvas with id='JeelizVTOWidgetCanvas' is the canvas where the VTO widget will be rendered
-         it should have CSS attribute position: absolute so that it can be resized without
-         changing the total size of the placeholder
-        -->
-        <canvas id='JeelizVTOWidgetCanvas'></canvas>
+           canvas with id='JeelizVTOWidgetCanvas' is the canvas where the VTO widget will be rendered
+           it should have CSS attribute position: absolute so that it can be resized without
+           changing the total size of the placeholder
+           -->
+        <div class="Jeeliz_custom">
+            <div class="Jeeliz_btns">
+                <!-- CHANGE MODEL BUTTONS: -->
+                <div class='JeelizVTOWidgetControls' id='JeelizVTOWidgetChangeModelContainer'>
+                    <div class="jeeCarouzelSlider__item jeeCarouzelSlider__item__unselected">
+                        <div class="productSummary productSummary__unselected">
+                            <div class="productSummary__imgPrice">
+                                <div class="productSummary__imgPrice__container"><img draggable="false" alt="Glasses Frame" src="https://productimage.jeeliz.com/US_rayban_justin_noir_rougeMirroir.jpg"></div>
+                            </div>
+                            <div class="productSummary__titleSeeMore">
+                                <div class="productSummary__title">RayBan RB4165 622/6Q Rubber Black/Brown Mirror Orange Size 54 mm Sunglasses</div>
+                                <div class="productSummary__titleSeeMore__seeMore">
+                                    <button>
+                                        <img src="https://jeeliz.com/sunglasses/images/dollar-white.svg" alt="">
+                                        <span>See Prices</span>
 
-        <div class='JeelizVTOWidgetControls JeelizVTOWidgetControlsTop'>
-            <!-- ADJUST BUTTON: -->
-            <button id='JeelizVTOWidgetAdjust'>
-                <div class="buttonIcon"><i class="fas fa-arrows-alt"></i></div>Adjust
-            </button>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productSummary productSummary__unselected">
+                            <div class="productSummary__imgPrice">
+                                <div class="productSummary__imgPrice__container"><img draggable="false" alt="Glasses Frame" src="https://productimage.jeeliz.com/US_rayban_justin_noir_rougeMirroir.jpg"></div>
+                            </div>
+                            <div class="productSummary__titleSeeMore">
+                                <div class="productSummary__title">RayBan RB4165 622/6Q Rubber Black/Brown Mirror Orange Size 54 mm Sunglasses</div>
+                                <div class="productSummary__titleSeeMore__seeMore">
+                                    <button>
+                                        <img src="https://jeeliz.com/sunglasses/images/dollar-white.svg" alt="">
+                                        <span>See Prices</span>
 
-            <!-- RESIZE WIDGET BUTTON: -->
-            <button id='buttonResizeCanvas' onclick='test_resizeCanvas();'>
-                <div class="buttonIcon"><i class="fas fa-sync-alt"></i></div>Resize widget
-            </button>
-        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productSummary productSummary__unselected">
+                            <div class="productSummary__imgPrice">
+                                <div class="productSummary__imgPrice__container"><img draggable="false" alt="Glasses Frame" src="https://productimage.jeeliz.com/US_rayban_justin_noir_rougeMirroir.jpg"></div>
+                            </div>
+                            <div class="productSummary__titleSeeMore">
+                                <div class="productSummary__title">RayBan RB4165 622/6Q Rubber Black/Brown Mirror Orange Size 54 mm Sunglasses</div>
+                                <div class="productSummary__titleSeeMore__seeMore">
+                                    <button>
+                                        <img src="https://jeeliz.com/sunglasses/images/dollar-white.svg" alt="">
+                                        <span>See Prices</span>
 
-        <!-- CHANGE MODEL BUTTONS: -->
-        <div class='JeelizVTOWidgetControls' id='JeelizVTOWidgetChangeModelContainer'>
-            <div>
-                <img src="">
-                <button onclick="JEELIZVTOWIDGET.load('rayban_aviator_or_vertFlash')">Model 1</button>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productSummary productSummary__unselected">
+                            <div class="productSummary__imgPrice">
+                                <div class="productSummary__imgPrice__container"><img draggable="false" alt="Glasses Frame" src="https://productimage.jeeliz.com/US_rayban_justin_noir_rougeMirroir.jpg"></div>
+                            </div>
+                            <div class="productSummary__titleSeeMore">
+                                <div class="productSummary__title">RayBan RB4165 622/6Q Rubber Black/Brown Mirror Orange Size 54 mm Sunglasses</div>
+                                <div class="productSummary__titleSeeMore__seeMore">
+                                    <button>
+                                        <img src="https://jeeliz.com/sunglasses/images/dollar-white.svg" alt="">
+                                        <span>See Prices</span>
+
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side_btns">
+                        <button onclick="JEELIZVTOWIDGET.load('rayban_aviator_or_vertFlash')"><img src="https://jeeliz.com/sunglasses/images/dollar-white.svg" alt=""> Model 1</button>
+                        <button onclick="JEELIZVTOWIDGET.load('rayban_round_cuivre_pinkBrownDegrade')"><img src="https://jeeliz.com/sunglasses/images/dollar-white.svg" alt=""> Model 2</button>
+                        <button onclick="JEELIZVTOWIDGET.load_modelStandalone('glasses3D/glasses1.json')"><img src="https://jeeliz.com/sunglasses/images/dollar-white.svg" alt=""> Model 3</button>
+                        <button onclick="load_modelBySKU()">by SKU</button>
+                        <!-- ADJUST BUTTON: -->
+                        <button id='JeelizVTOWidgetAdjust'>
+                            <div class="buttonIcon"><i class="fas fa-arrows-alt"></i></div>
+                            Adjust
+                        </button>
+                        <!-- RESIZE WIDGET BUTTON: -->
+                        <button id='buttonResizeCanvas' onclick='test_resizeCanvas();'>
+                            <div class="buttonIcon"><i class="fas fa-sync-alt"></i></div>
+                            Resize widget
+                        </button>
+                    </div>
+                </div>
             </div>
-            <button onclick="JEELIZVTOWIDGET.load('rayban_round_cuivre_pinkBrownDegrade')">Model 2</button>
-            <button onclick="JEELIZVTOWIDGET.load_modelStandalone('glasses3D/glasses1.json')">Model 3</button>
-            <button onclick="load_modelBySKU()">by SKU</button>
+            <canvas id='JeelizVTOWidgetCanvas'></canvas>
         </div>
-
         <!-- BEGIN ADJUST NOTICE -->
         <div id='JeelizVTOWidgetAdjustNotice'>
             Move the glasses to adjust them.
             <button class='JeelizVTOWidgetBottomButton' id='JeelizVTOWidgetAdjustExit'>Quit</button>
         </div>
         <!-- END AJUST NOTICE -->
-
         <!-- BEGIN LOADING WIDGET (not model) -->
         <div id='JeelizVTOWidgetLoading'>
             <div class='JeelizVTOWidgetLoadingText'>
@@ -169,9 +227,17 @@
             </div>
         </div>
         <!-- END LOADING -->
-
     </div>
 </div>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
-
