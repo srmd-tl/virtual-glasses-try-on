@@ -129,77 +129,12 @@
            changing the total size of the placeholder
            -->
         <div class="Jeeliz_custom">
+
             <div class="Jeeliz_btns">
                 <!-- CHANGE MODEL BUTTONS: -->
                 <div class='JeelizVTOWidgetControls' id='JeelizVTOWidgetChangeModelContainer'>
-                    <div class="jeeCarouzelSlider__item jeeCarouzelSlider__item__unselected">
-                        <div class="productSummary productSummary__unselected">
-                            <div class="productSummary__imgPrice">
-                                <div class="productSummary__imgPrice__container"><img draggable="false" alt="Glasses Frame" src="https://productimage.jeeliz.com/US_rayban_justin_noir_rougeMirroir.jpg"></div>
-                            </div>
-                            <div class="productSummary__titleSeeMore">
-                                <div class="productSummary__title">RayBan RB4165 622/6Q Rubber Black/Brown Mirror Orange Size 54 mm Sunglasses</div>
-                                <div class="productSummary__titleSeeMore__seeMore">
-                                    <button>
-                                        <img src="https://jeeliz.com/sunglasses/images/dollar-white.svg" alt="">
-                                        <span>See Prices</span>
-
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productSummary productSummary__unselected">
-                            <div class="productSummary__imgPrice">
-                                <div class="productSummary__imgPrice__container"><img draggable="false" alt="Glasses Frame" src="https://productimage.jeeliz.com/US_rayban_justin_noir_rougeMirroir.jpg"></div>
-                            </div>
-                            <div class="productSummary__titleSeeMore">
-                                <div class="productSummary__title">RayBan RB4165 622/6Q Rubber Black/Brown Mirror Orange Size 54 mm Sunglasses</div>
-                                <div class="productSummary__titleSeeMore__seeMore">
-                                    <button>
-                                        <img src="https://jeeliz.com/sunglasses/images/dollar-white.svg" alt="">
-                                        <span>See Prices</span>
-
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productSummary productSummary__unselected">
-                            <div class="productSummary__imgPrice">
-                                <div class="productSummary__imgPrice__container"><img draggable="false" alt="Glasses Frame" src="https://productimage.jeeliz.com/US_rayban_justin_noir_rougeMirroir.jpg"></div>
-                            </div>
-                            <div class="productSummary__titleSeeMore">
-                                <div class="productSummary__title">RayBan RB4165 622/6Q Rubber Black/Brown Mirror Orange Size 54 mm Sunglasses</div>
-                                <div class="productSummary__titleSeeMore__seeMore">
-                                    <button>
-                                        <img src="https://jeeliz.com/sunglasses/images/dollar-white.svg" alt="">
-                                        <span>See Prices</span>
-
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="productSummary productSummary__unselected">
-                            <div class="productSummary__imgPrice">
-                                <div class="productSummary__imgPrice__container"><img draggable="false" alt="Glasses Frame" src="https://productimage.jeeliz.com/US_rayban_justin_noir_rougeMirroir.jpg"></div>
-                            </div>
-                            <div class="productSummary__titleSeeMore">
-                                <div class="productSummary__title">RayBan RB4165 622/6Q Rubber Black/Brown Mirror Orange Size 54 mm Sunglasses</div>
-                                <div class="productSummary__titleSeeMore__seeMore">
-                                    <button>
-                                        <img src="https://jeeliz.com/sunglasses/images/dollar-white.svg" alt="">
-                                        <span>See Prices</span>
-
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="side_btns">
-                        <button onclick="JEELIZVTOWIDGET.load('rayban_aviator_or_vertFlash')"><img src="https://jeeliz.com/sunglasses/images/dollar-white.svg" alt=""> Model 1</button>
-                        <button onclick="JEELIZVTOWIDGET.load('rayban_round_cuivre_pinkBrownDegrade')"><img src="https://jeeliz.com/sunglasses/images/dollar-white.svg" alt=""> Model 2</button>
-                        <button onclick="JEELIZVTOWIDGET.load_modelStandalone('glasses3D/glasses1.json')"><img src="https://jeeliz.com/sunglasses/images/dollar-white.svg" alt=""> Model 3</button>
-                        <button onclick="load_modelBySKU()">by SKU</button>
-                        <!-- ADJUST BUTTON: -->
+                         <!-- ADJUST BUTTON: -->
                         <button id='JeelizVTOWidgetAdjust'>
                             <div class="buttonIcon"><i class="fas fa-arrows-alt"></i></div>
                             Adjust
@@ -210,8 +145,31 @@
                             Resize widget
                         </button>
                     </div>
+                    <div class="jeeCarouzelSlider__item jeeCarouzelSlider__item__unselected">
+                        @foreach($glasses as $singleObj)
+                        <div class="productSummary productSummary__unselected" onclick="JEELIZVTOWIDGET.load({{$singleObj->sku}})">
+                            <div class="productSummary__imgPrice">
+                                <div class="productSummary__imgPrice__container">
+                                    <img draggable="false" alt="Glasses Frame" src="{{$singleObj->img}}"></div>
+                            </div>
+                            <div class="productSummary__titleSeeMore">
+                                <div class="productSummary__title">{{$singleObj->label}}</div>
+                                <div class="productSummary__titleSeeMore__seeMore">
+                                    <button onclick="JEELIZVTOWIDGET.load('{{$singleObj->sku}}')">
+                                        <img src="https://jeeliz.com/sunglasses/images/dollar-white.svg" alt="">
+                                        <span>{{$singleObj->price}}</span>
+
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+
+
                 </div>
             </div>
+
             <canvas id='JeelizVTOWidgetCanvas'></canvas>
         </div>
         <!-- BEGIN ADJUST NOTICE -->
