@@ -12,7 +12,7 @@ body {
   text-align: center;
   font-family: Helvetica Neu, Arial, sans-serif;
   margin: 0;
-  padding: 0;`
+  padding: 0;
   color: #444;
   box-sizing: border-box;
 }
@@ -30,7 +30,9 @@ button, select {
   margin: 0;
   -webkit-appearance: none;
 }
+.Jeeliz_custom {display: flex;/* align-items: center; *//* margin-right: 10px !important; */width: 100%;max-width: 100%;}
 
+.Jeeliz_btns {display: flex;margin-right: 15px;width: 100%;}
 button:hover {
   background: rgba(0, 0, 0, 0.8);
   color: white;
@@ -62,47 +64,30 @@ button:hover {
 #JeelizVTOWidget {
   flex-grow: 1;
   width: 100%;
-  max-width: calc(100vh - 70px);
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1280px;
   position: relative;
-}
+margin: auto;}
 
 #JeelizVTOWidgetCanvas {
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-}
+width: calc(100% - 400px) !important;max-width: 100% !important;/* height: 100% !important; *//* flex: 1; */}
+#JeelizVTOWidgetChangeModelContainer > button img {max-width: 24px;margin-right: 10px;}
 
-.JeelizVTOWidgetControls {
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-}
 .buttonIcon {
   display: inline-block;
   margin-right: 8px;
 }
 
-.JeelizVTOWidgetControlsTop {
-  top: 16px;
-  height: 40px;
-}
-.JeelizVTOWidgetControlsTop > button {
-   width: 45%;
-   min-width: auto;
-}
 
-#JeelizVTOWidgetChangeModelContainer {
-  bottom: 16px;
-  height: 40px;  
-}
+.JeelizVTOWidgetControlsTop > button {
+   width: 160px;
+ 
+margin-bottom: 10px;}
+
+
 #JeelizVTOWidgetChangeModelContainer > button {
-  width: 20%;
-  min-width: auto;
-}
+  width: 160px;
+  /* min-width: auto; */
+margin-bottom: 10px;display: flex;align-items: center;justify-content: center;}
 
 #JeelizVTOWidgetLoading {
   position: fixed;
@@ -113,6 +98,10 @@ button:hover {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0,0,0,0.5);
+}
+.productSummary.current {
+    border-color: red;
+    border-radius: 5px;
 }
 .JeelizVTOWidgetLoadingText {
   color: white;
@@ -147,8 +136,97 @@ button:hover {
   display: none;
 }
 #JeelizVTOWidgetChangeModelContainer {
-  display: none;
-}
+width: 400px;max-height: 600px;overflow: auto;padding0px FONT-VARIANT: JIS04;}
 #buttonResizeCanvas {
   display: none;
 }
+
+
+
+
+/*left bar custom design*/
+
+.productSummary {
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    border-radius: 3px;
+    position: relative;
+    padding: 5px;
+    max-width: 450px;
+border-radius: 5px;border: 1px solid white;margin-bottom: 19px;}
+
+.productSummary__imgPrice {
+    width: 50%;
+    position: relative;
+    height: 100%;
+}
+
+.productSummary__titleSeeMore {
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.device-desktop .productSummary__imgPrice__container {
+    height: 80%;
+}
+
+.productSummary__imgPrice__container img {
+    width: 80%;
+}
+
+.productSummary__title {
+    margin-bottom: 3px;
+    overflow: hidden;
+    
+    
+    ;
+}
+
+.productSummary__titleSeeMore__seeMore {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    
+}
+
+.productSummary__titleSeeMore__seeMore button {
+    width: 100%;
+    padding: 0;
+    border-radius: 3px;
+    
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;transition: all .2s;
+    border: 0;
+    color: #fff;
+    background: #444;
+    font-size: 16px;
+    transition: background .2s;
+}
+.productSummary__titleSeeMore__seeMore button img {
+    max-width: 28px;
+    margin-right: 9px;
+}
+.productSummary__titleSeeMore__seeMore__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.side_btns buttons {display: flex;align-items: center;justify-content: center;}
+
+.side_btns {display: flex;align-items: center;flex-wrap: wrap;justify-content: center;}
+
+.side_btns buttons img {max-width: 20px;}
+
+.side_btns button {display: flex;align-items: center;width: 160px;height: 40px;font-size: 16px;background: #000;color: #fff;border-radius: 10px;margin: 10px;justify-content: center;}
+
+.side_btns button img {width: 25px;}
