@@ -52,7 +52,7 @@ button:hover {
     box-shadow: 0 0 3px black;
     background-color: rgb(12, 127, 194);
     color: white;
-}
+    position: relative;}
 .headerTitle {
     font-size: 24pt;
     font-family: 'Roboto Condensed', sans-serif;
@@ -64,12 +64,12 @@ button:hover {
 #JeelizVTOWidget {
     flex-grow: 1;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1366px;
     position: relative;
     margin: auto;}
 
 #JeelizVTOWidgetCanvas {
-    width: calc(100% - 400px) !important;max-width: 100% !important;/* height: 100% !important; *//* flex: 1; */}
+    width: calc(100% - 400px) !important;max-width: 100% !important;}
 #JeelizVTOWidgetChangeModelContainer > button img {max-width: 24px;margin-right: 10px;}
 
 .buttonIcon {
@@ -136,7 +136,7 @@ button:hover {
     display: none;
 }
 #JeelizVTOWidgetChangeModelContainer {
-    width: 400px;max-height: 600px;overflow: auto;padding0px FONT-VARIANT: JIS04;}
+    width: 400px;max-height: 600px;overflow: auto;;;}
 #buttonResizeCanvas {
     display: none;
 }
@@ -230,3 +230,87 @@ button:hover {
 .side_btns button {display: flex;align-items: center;width: 160px;height: 40px;font-size: 16px;background: #000;color: #fff;border-radius: 10px;margin: 10px;justify-content: center;}
 
 .side_btns button img {width: 25px;}
+
+
+
+
+.container-menu {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;left: 22px;top: 13px;display: none;}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-7px, 6px);
+    transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+@media (max-width: 1366px) {
+
+}
+
+
+@media (max-width: 1200px) {
+
+}
+
+
+@media (max-width: 992px) {
+    #JeelizVTOWidgetChangeModelContainer {
+        width: 320px;
+        max-height: 600px;
+        padding: 0px 10px 0px 0px;}
+    #JeelizVTOWidgetCanvas {
+        width: calc(100% - 300px) !important;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .Jeeliz_btns {
+        display: flex;
+        margin-right: 15px;
+        width: 100%;
+        position: absolute;
+        background: #fff;
+        max-width: 300px;
+        margin: 0;left: -999%;transform: translateX(-990%);transition: .5s;height: 100vh;background: #fff;}
+    #JeelizVTOWidgetCanvas {
+        width: 100% !important;
+    }
+
+    .Jeeliz_btns.menu-change {
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .container-menu {
+
+        display: block;
+    }
+
+
+}
+
+
+@media (max-width: 576px) {
+
+
+}
+
+

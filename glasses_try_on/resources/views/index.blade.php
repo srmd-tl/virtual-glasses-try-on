@@ -6,11 +6,27 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <script>
-        $(document).ready(function() {
-            $('.productSummary').click(function(){
+        $(document).ready(function($)
+        {
+
+            $('.headerTitle').click(function(){
+                $(".container-menu").removeClass("change");
+                $(".Jeeliz_btns").removeClass("menu-change");
+            });
+            $('.productSummary , .side_btns button').click(function(){
                 $('.productSummary').removeClass('current');
                 $(this).addClass('current');
-            });});
+                $(".container-menu").removeClass("change");
+                $(".Jeeliz_btns").removeClass("menu-change");
+            });
+
+            $('.container-menu').click(function(){
+                $(".container-menu").toggleClass("change");
+                $(".Jeeliz_btns").toggleClass("menu-change");
+
+            });
+
+        });
     </script>
     <!-- Forbid resize on pinch with IOS Safari: -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
@@ -110,6 +126,11 @@
 <body onload="main()">
 <div class='content'>
     <div class='header'>
+        <div class="container-menu">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
         <div class="headerTitle">
             Try on shades
         </div>
