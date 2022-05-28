@@ -193,6 +193,7 @@ button:hover {
     justify-content: flex-start;
     width: 100%;
 
+
 }
 
 .productSummary__titleSeeMore__seeMore button {
@@ -206,7 +207,7 @@ button:hover {
     justify-content: center;transition: all .2s;
     border: 0;
     color: #fff;
-    background: #444;
+    background: #3a85fb;
     font-size: 16px;
     transition: background .2s;
     height: 30px;
@@ -267,6 +268,7 @@ button:hover {
     min-width: 20px !important;
     margin-left: 5px;
     font-size: 15px !important;
+    background: green !important;
 }
 
 @media (max-width: 1366px) {
