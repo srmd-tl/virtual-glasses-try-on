@@ -35,7 +35,7 @@
     <!-- For icons adjust fame or resize canvas -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <!-- Font for the header only: -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=castellar" rel="stylesheet">
     <!-- main stylesheet: -->
     <link rel='stylesheet' href='{{asset('JeelizVTOWidget.css')}}' />
 
@@ -127,12 +127,10 @@
 <div class='content'>
     <div class='header'>
         <div class="container-menu">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+            <img src="{{asset('wybierz.png')}}">
         </div>
         <div class="headerTitle">
-            Try on shades
+            Wirtualna Przymierzalnia
         </div>
     </div>
     <!-- Please keep the same element IDs so that JEELIZVTOWIDGET can extract them from the DOM -->
@@ -158,12 +156,12 @@
                          <!-- ADJUST BUTTON: -->
                         <button id='JeelizVTOWidgetAdjust'>
                             <div class="buttonIcon"><i class="fas fa-arrows-alt"></i></div>
-                            Adjust
+                            Dostosuj
                         </button>
                         <!-- RESIZE WIDGET BUTTON: -->
                         <button id='buttonResizeCanvas' onclick='test_resizeCanvas();'>
                             <div class="buttonIcon"><i class="fas fa-sync-alt"></i></div>
-                            Resize widget
+                            Zmień widok
                         </button>
                     </div>
                     <div class="jeeCarouzelSlider__item jeeCarouzelSlider__item__unselected">
@@ -177,7 +175,7 @@
                                 <div class="productSummary__title">{{$singleObj->label}}</div>
                                 <div class="productSummary__titleSeeMore__seeMore">
                                     <button onclick="JEELIZVTOWIDGET.load('{{$singleObj->sku}}')">
-                                        <img src="https://jeeliz.com/sunglasses/images/dollar-white.svg" alt="">
+                                        Przymierz
                                         <span>{{$singleObj->price}}</span>
 
                                     </button>
@@ -195,8 +193,8 @@
         </div>
         <!-- BEGIN ADJUST NOTICE -->
         <div id='JeelizVTOWidgetAdjustNotice'>
-            Move the glasses to adjust them.
-            <button class='JeelizVTOWidgetBottomButton' id='JeelizVTOWidgetAdjustExit'>Quit</button>
+            Przesuń okulary, aby je dostosować.
+            <button class='JeelizVTOWidgetBottomButton' id='JeelizVTOWidgetAdjustExit'>Zamkni</button>
         </div>
         <!-- END AJUST NOTICE -->
         <!-- BEGIN LOADING WIDGET (not model) -->

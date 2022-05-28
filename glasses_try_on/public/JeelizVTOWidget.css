@@ -50,9 +50,10 @@ button:hover {
     width: 100%;
     height: 70px;
     box-shadow: 0 0 3px black;
-    background-color: rgb(12, 127, 194);
-    color: white;
-    position: relative;}
+    background-color: rgb(255, 255, 255);
+    color: black;
+    position: relative;
+}
 .headerTitle {
     font-size: 24pt;
     font-family: 'Roboto Condensed', sans-serif;
@@ -69,7 +70,9 @@ button:hover {
     margin: auto;}
 
 #JeelizVTOWidgetCanvas {
-    width: calc(100% - 400px) !important;max-width: 100% !important;}
+    width: calc(100% - 400px) !important;max-width: 100% !important;
+    object-fit: cover;
+}
 #JeelizVTOWidgetChangeModelContainer > button img {max-width: 24px;margin-right: 10px;}
 
 .buttonIcon {
