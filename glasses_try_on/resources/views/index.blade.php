@@ -174,7 +174,12 @@
                             <div class="productSummary__titleSeeMore">
                                 <div class="productSummary__title">{{$singleObj->label}}</div>
                                 <div class="productSummary__titleSeeMore__seeMore">
-                                    <button onclick="JEELIZVTOWIDGET.load('{{$singleObj->sku}}')">
+
+                                    <button @if($singleObj->is_static)onclick="JEELIZVTOWIDGET.load_modelStandalone('{{asset('glasses3D/'.$singleObj->sku)}}')"
+                                        @else
+                                        onclick="JEELIZVTOWIDGET.load('{{$singleObj->sku}}')"
+                                        @endif
+                                        >
                                         Przymierz
                                         <span>{{$singleObj->price}}</span>
 
