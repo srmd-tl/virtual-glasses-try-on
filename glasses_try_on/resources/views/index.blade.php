@@ -175,7 +175,7 @@
                                 <div class="productSummary__title">{{$singleObj->label}}</div>
                                 <div class="productSummary__titleSeeMore__seeMore">
 
-                                    <button @if($singleObj->is_static)onclick="JEELIZVTOWIDGET.load_modelStandalone('{{asset('glasses3D/'.$singleObj->sku)}}')"
+                                    <button @if($singleObj->is_static)onclick="JEELIZVTOWIDGET.load_modelStandalone('{{asset('glasses3D/'.$singleObj->sku.'.json')}}')"
                                         @else
                                         onclick="JEELIZVTOWIDGET.load('{{$singleObj->sku}}')"
                                         @endif
@@ -184,6 +184,16 @@
                                         <span>{{$singleObj->price}}</span>
 
                                     </button>
+                                    <button class="cart_btn">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        Kupic
+                                    </button>
+
+
+
+
+
+
                                 </div>
                             </div>
                         </div>

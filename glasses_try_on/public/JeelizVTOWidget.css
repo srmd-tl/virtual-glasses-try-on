@@ -209,6 +209,8 @@ button:hover {
     background: #444;
     font-size: 16px;
     transition: background .2s;
+    height: 30px;
+
 }
 .productSummary__titleSeeMore__seeMore button img {
     max-width: 28px;
@@ -261,7 +263,11 @@ button:hover {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
-
+.cart_btn {
+    min-width: 20px !important;
+    margin-left: 5px;
+    font-size: 15px !important;
+}
 
 @media (max-width: 1366px) {
 
