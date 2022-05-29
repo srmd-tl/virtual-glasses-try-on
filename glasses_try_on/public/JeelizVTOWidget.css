@@ -229,7 +229,7 @@ button:hover {
 
 .side_btns buttons {display: flex;align-items: center;justify-content: center;}
 
-.side_btns {display: flex;align-items: center;justify-content: center;position: fixed;bottom: 0;right: 0;margin: auto;width: calc(100% - 415px) !important;}
+.side_btns {display: flex;align-items: center;justify-content: center;position: absolute;bottom: 0;right: 0;margin: auto;width: calc(100% - 415px) !important;}
 
 .side_btns buttons img {max-width: 20px;}
 
