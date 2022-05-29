@@ -152,18 +152,7 @@
             <div class="Jeeliz_btns">
                 <!-- CHANGE MODEL BUTTONS: -->
                 <div class='JeelizVTOWidgetControls' id='JeelizVTOWidgetChangeModelContainer'>
-                    <div class="side_btns desktop__view">
-                         <!-- ADJUST BUTTON: -->
-                        <button id='JeelizVTOWidgetAdjust'>
-                            <div class="buttonIcon"><i class="fas fa-arrows-alt"></i></div>
-                            Dostosuj
-                        </button>
-                        <!-- RESIZE WIDGET BUTTON: -->
-                        <button id='buttonResizeCanvas' onclick='test_resizeCanvas();'>
-                            <div class="buttonIcon"><i class="fas fa-sync-alt"></i></div>
-                            Zmień widok
-                        </button>
-                    </div>
+
                     <div class="jeeCarouzelSlider__item jeeCarouzelSlider__item__unselected">
                         @foreach($glasses as $singleObj)
                         <div class="productSummary productSummary__unselected" onclick="JEELIZVTOWIDGET.load({{$singleObj->sku}})">
@@ -202,7 +191,7 @@
 
                 </div>
             </div>
-            <div class="mobile__view" >
+            <div class="side_btns">
                 <!-- ADJUST BUTTON: -->
                 <button id='JeelizVTOWidgetAdjust'>
                     <div class="buttonIcon"><i class="fas fa-arrows-alt"></i></div>

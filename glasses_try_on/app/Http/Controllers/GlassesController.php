@@ -14,7 +14,7 @@ class GlassesController extends Controller
      */
     public function index()
     {
-        $glasses =Glasses::all();
+        $glasses =Glasses::paginate(2);
         return view('index',['glasses'=>$glasses]);
     }
 
