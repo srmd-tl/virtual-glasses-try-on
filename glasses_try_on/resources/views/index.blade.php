@@ -149,10 +149,10 @@
            -->
         <div class="Jeeliz_custom">
 
-            <div class="Jeeliz_btns desktop__view">
+            <div class="Jeeliz_btns">
                 <!-- CHANGE MODEL BUTTONS: -->
                 <div class='JeelizVTOWidgetControls' id='JeelizVTOWidgetChangeModelContainer'>
-                    <div class="side_btns">
+                    <div class="side_btns desktop__view">
                          <!-- ADJUST BUTTON: -->
                         <button id='JeelizVTOWidgetAdjust'>
                             <div class="buttonIcon"><i class="fas fa-arrows-alt"></i></div>
@@ -203,7 +203,18 @@
 
                 </div>
             </div>
-            <div class="mobile__view" ></div>
+            <div class="mobile__view" >
+                <!-- ADJUST BUTTON: -->
+                <button id='JeelizVTOWidgetAdjust'>
+                    <div class="buttonIcon"><i class="fas fa-arrows-alt"></i></div>
+                    Dostosuj
+                </button>
+                <!-- RESIZE WIDGET BUTTON: -->
+                <button id='buttonResizeCanvas' onclick='test_resizeCanvas();'>
+                    <div class="buttonIcon"><i class="fas fa-sync-alt"></i></div>
+                    Zmień widok
+                </button>
+            </div>
             <canvas id='JeelizVTOWidgetCanvas'></canvas>
         </div>
         <!-- BEGIN ADJUST NOTICE -->
