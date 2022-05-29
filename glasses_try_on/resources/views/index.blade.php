@@ -149,7 +149,7 @@
            -->
         <div class="Jeeliz_custom">
 
-            <div class="Jeeliz_btns">
+            <div class="Jeeliz_btns desktop__view">
                 <!-- CHANGE MODEL BUTTONS: -->
                 <div class='JeelizVTOWidgetControls' id='JeelizVTOWidgetChangeModelContainer'>
                     <div class="side_btns">
@@ -203,7 +203,7 @@
 
                 </div>
             </div>
-
+            <div class="mobile__view" ></div>
             <canvas id='JeelizVTOWidgetCanvas'></canvas>
         </div>
         <!-- BEGIN ADJUST NOTICE -->
