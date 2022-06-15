@@ -130,7 +130,7 @@
             <img src="{{asset('wybierz.png')}}">
         </div>
         <div class="headerTitle">
-            Wirtualna Przymierzalnia
+            EYEWEARPOLAND
         </div>
     </div>
     <!-- Please keep the same element IDs so that JEELIZVTOWIDGET can extract them from the DOM -->
@@ -174,7 +174,7 @@
                                     </button>
                                     <button class="cart_btn">
                                         <i class="fas fa-shopping-cart"></i>
-                                        Kupic
+                                        Kupić
                                     </button>
 
 
